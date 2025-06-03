@@ -1,0 +1,169 @@
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+
+.dark {
+    --dark: #f8fafc;
+    --light: #1e293b;
+}
+
+.dark body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.dark .bg-white {
+    background-color: #2d3748;
+}
+
+.dark .bg-gray-50 {
+    background-color: #1a202c;
+}
+
+.dark .text-gray-800 {
+    color: #e2e8f0;
+}
+
+.dark .text-gray-600 {
+    color: #a0aec0;
+}
+
+.dark .border-gray-300 {
+    border-color: #4a5568;
+}
+
+.dark .bg-gray-800 {
+    background-color: #1a202c;
+}
+
+.dark .text-gray-400 {
+    color: #718096;
+}
+
+.dark .bg-blue-100 {
+    background-color: #2c5282;
+}
+
+.dark .text-blue-800 {
+    color: #bee3f8;
+}
+
+.dark .bg-blue-50 {
+    background-color: #2b6cb0;
+}
+
+.dark .border-blue-500 {
+    border-color: #4299e1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+}
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    border-color: var(--primary);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--primary);
+    z-index: 9999;
+    transition: width 0.3s ease;
+}
+
+/* Adjustments for "View My Work" button in dark mode */
+.dark .btn.bg-white {
+    background-color: #4a5568; /* Darker background for contrast */
+    border-color: #6a768e; /* Slightly lighter border */
+    color: #e2e8f0; /* Lighter text for visibility */
+}
+
+.dark .btn.bg-white:hover {
+    background-color: #5a667a; /* Darker hover state */
+    border-color: #718096;
+}
+
+/* Adjustments for top navigation links in dark mode */
+.dark .nav-link {
+    color: #e2e8f0; /* Lighter text for visibility in dark mode */
+}
+.dark .nav-link:hover {
+    color: var(--primary); /* Maintain hover color */
+}

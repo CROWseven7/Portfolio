@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Miller Gonçalves | Desenvolvedor & Criador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div id="loading-bar" style="width: 0%;"></div>
+    
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-500" data-section="home">Rodrigo Miller Gonçalves</a>
+            <button id="theme-toggle" class="ml-4 text-gray-700 dark:text-gray-300 focus:outline-none">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl text-gray-700 dark:text-gray-300"></i>
+            </button>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-500 py-2" data-section="home">Início</a>
+                <a href="#skills" class="nav-link text-gray-700 hover:text-blue-500 py-2" data-section="skills">Habilidades</a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-500 py-2" data-section="projects">Projetos</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 py-2" data-section="contact">Contato</a>
+            </div>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-md">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500" data-section="home">Início</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-500" data-section="skills">Habilidades</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-500" data-section="projects">Projetos</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500" data-section="contact">Contato</a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section min-h-screen flex items-center pt-20 pb-16">
+            <div class="container mx-auto px-6 flex flex-col items-center text-center">
+                <div class="mb-12 md:mb-0 max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                        Olá, sou <span class="text-blue-500">Rodrigo Miller Gonçalves</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-600 mb-8">Editor de Vídeos, Fotos e Desenvolvedor Web</h2>
+                    <p class="text-gray-600 mb-8">
+                        Um desenvolvedor e criador digital de 17 anos, especializado em produção multimídia e desenvolvimento web.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#contact" class="btn btn-primary text-white px-6 py-3 rounded-lg font-medium" data-section="contact">Entre em Contato</a>
+                        <a href="#projects" class="btn bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50" data-section="projects">Ver Meu Trabalho</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+        
+        <section id="skills" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Minhas Habilidades</h2>
+                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                    Sou experiente em várias disciplinas digitais que me permitem criar experiências digitais abrangentes.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="skill-card bg-white rounded-xl shadow-md p-8 transition-all duration-300">
+                        <div class="text-blue-500 mb-6">
+                            <i class="fas fa-video text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Edição de Vídeo</h3>
+                        <p class="text-gray-600 mb-4">
+                            Serviços de edição de vídeo incluindo correção de cor, transições, efeitos e storytelling.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">DaVinci Resolve</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Efeitos Visuais</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Efeitos Sonoros</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Narrativa Visual</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card bg-white rounded-xl shadow-md p-8 transition-all duration-300">
+                        <div class="text-blue-500 mb-6">
+                            <i class="fas fa-image text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Edição de Fotos</h3>
+                        <p class="text-gray-600 mb-4">
+                            Retoque, manipulação e aprimoramento de fotos de alta qualidade para destacar suas imagens.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Photoshop</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Tratamento de Imagens</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Manipulação de Fotos</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Correção de Cor</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card bg-white rounded-xl shadow-md p-8 transition-all duration-300">
+                        <div class="text-blue-500 mb-6">
+                            <i class="fas fa-code text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Desenvolvimento Web</h3>
+                        <p class="text-gray-600 mb-4">
+                            Construindo websites e aplicações web responsivos e modernos com código limpo e eficiente.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Cleoscript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">GDScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Meus Projetos</h2>
+                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                    Confira alguns dos meus trabalhos mais recentes e contribuições para a comunidade de desenvolvedores.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fab fa-github text-4xl text-gray-800 mr-4"></i>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800">Perfil GitHub</h3>
+                                    <p class="text-gray-600">Todos os meus repositórios públicos e contribuições</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                Explore meus projetos de código aberto, exemplos de código e trabalhos de desenvolvimento no GitHub.
+                            </p>
+                            <a href="https://github.com/CROWseven7" target="_blank" class="inline-block btn btn-primary text-white px-6 py-2 rounded-lg font-medium">
+                                Ver Perfil <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Dark Souls Crônicas: A Saga de Tecnoworld</h3>
+                            <p class="text-gray-600 mb-6">
+                                Este projeto é uma fusão de storytelling e aprendizado, atualmente em criação: um vídeo envolvente que dramatiza os conhecimentos adquiridos em atividades escolares como os lendários chefes do universo de Dark Souls.
+                            </p>
+                            <a href="https://github.com/CROWseven7?tab=repositories" target="_blank" class="inline-block btn bg-white border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 mb-4">
+                                Ver Projeto <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <div class="mt-4">
+                                <a href="https://github.com/CROWseven7?tab=repositories" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium inline-flex items-center">
+                                    Ver todos os repositórios <i class="fas fa-chevron-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Atividade de Desenvolvedor</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-500 mb-2" id="github-repos">10+</div>
+                            <p class="text-gray-600">Repositórios</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-500 mb-2" id="github-projects">5+</div>
+                            <p class="text-gray-600">Projetos</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-500 mb-2" id="github-commits">100+</div>
+                            <p class="text-gray-600">Commits</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-500 mb-2" id="github-contributions">50+</div>
+                            <p class="text-gray-600">Contribuições</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Contato</h2>
+                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                    Tem um projeto em mente ou quer colaborar? Sinta-se à vontade para entrar em contato diretamente.
+                </p>
+                
+                <div class="flex flex-col items-center gap-12">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-center">
+                                <div class="text-blue-500 mr-4">
+                                    <i class="fas fa-envelope text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Envie-me um Email</h4>
+                                    <p class="text-gray-600">
+                                        <a href="mailto:rodrigolaylla13@gmail.com" class="hover:text-blue-500 transition">rodrigolaylla13@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-center">
+                                <div class="text-blue-500 mr-4">
+                                    <i class="fab fa-github text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Perfil GitHub</h4>
+                                    <p class="text-gray-600">
+                                        <a href="https://github.com/CROWseven7" target="_blank" class="hover:text-blue-500 transition">github.com/CROWseven7</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Rodrigo Miller Gonçalves</h3>
+                    <p class="text-gray-400">Editor de Vídeo, Fotos e Desenvolvedor Web</p>
+                </div>
+                
+                <div class="flex space-x-6 items-center">
+                    <a href="#home" class="text-gray-400 hover:text-white transition" data-section="home">Início</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition" data-section="skills">Habilidades</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition" data-section="projects">Projetos</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition" data-section="contact">Contato</a>
+                    <a href="https://github.com/CROWseven7" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
+                </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Active navigation link indicator
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Update loading bar based on scroll progress
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('loading-bar').style.width = scrollPercentage + '%';
+        });
+        
+        // Animate stats on scroll (for demonstration)
+        const animateStats = () => {
+            const githubRepos = document.getElementById('github-repos');
+            const githubProjects = document.getElementById('github-projects');
+            const githubCommits = document.getElementById('github-commits');
+            const githubContributions = document.getElementById('github-contributions');
+            
+            // These are just demo numbers - in a real app you might fetch actual GitHub stats
+            if (isElementInViewport(githubRepos)) {
+                animateValue(githubRepos, 0, 10, 1000);
+                animateValue(githubProjects, 0, 5, 1000);
+                animateValue(githubCommits, 0, 100, 1000);
+                animateValue(githubContributions, 0, 50, 1000);
+                
+                // Remove event listener after animation to prevent re-animating
+                window.removeEventListener('scroll', animateStats);
+            }
+        };
+        
+        window.addEventListener('scroll', animateStats);
+        
+        // Helper function to animate value counting up
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Math.floor(progress * (end - start) + start) + '+';
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Helper function to check if element is in viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+        
+        // Trigger animation if stats are already in view on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (isElementInViewport(document.getElementById('github-repos'))) {
+                animateStats();
+            }
+
+            // Dark mode toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            // Check for saved theme preference or use system preference
+            if (localStorage.getItem('theme') === 'dark' || 
+                (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.toggle('dark');
+                if (isDark) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
